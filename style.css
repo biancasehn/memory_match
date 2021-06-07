@@ -1,0 +1,152 @@
+html {
+    font-size:100%;
+}
+
+* {
+box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    font-family: 'Rockwell', sans-serif;
+}
+body {
+    background: radial-gradient( #41E2BA, #fff)
+}
+
+h1 {
+    margin-top: 2rem;
+}
+
+.container {
+    position: relative;
+    font-size: 2.5em;
+    align-items: center;
+
+    padding: 1em 7em 1em 7em;
+
+    display:grid;
+    justify-content: space-around;
+    align-content: space-around;
+    grid-template-columns: repeat(5, 23%);
+    grid-template-rows: repeat(4, 25%);
+
+}
+
+@media (max-width:1200px) {
+    .container{
+        font-size: 2em;
+    }
+}
+
+@media(max-width:990px){
+    .container{
+        font-size: 1.8em;
+        padding: 1em 6em 1em 6em;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        font-size: 1.7em;
+        padding: 1em 3.5em 1em 3.5em;
+    }
+}
+
+@media(max-width:540px){
+    .container{
+        font-size: 1.6em;
+        padding: 1em 3em 1em 3em;
+
+    }
+}
+
+@media(max-width:480px){
+    .container{
+        font-size: 1.5em;
+        padding: 1em 2em 1em 2em;
+    }
+
+}
+
+@media(max-width:380px){
+    .container{
+        font-size: 1.3em;
+        padding: 1em 1.7em 1em 1.7em;
+    }
+}
+
+/* BOARD */
+.board {
+    visibility: hidden;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: fit-content;
+    background-color: #FCDEBE;
+    padding: .5em 2em;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 1px 0 3px 1px rgb(179, 176, 176);
+}
+
+.board p {
+    margin: 0;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-35px)
+    };
+    to {
+        transform: translateX(0px)
+    };
+}
+
+.displayBoard {
+    position: relative;
+    visibility: visible;
+    animation: slideRight .5s ease;
+}
+
+/* ZONES */
+.zone {
+    background-color:#F06543;
+    color: #fff;
+    align-content: center;
+    justify-content: center;
+    padding:.7em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+/* .zone:hover {
+    transform: scale(1.05);
+} */
+
+.rotate {
+    transform: rotateY(180deg)
+}
+
+.myModal-open {
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(207, 204, 204, 70%);
+    padding: 2em;
+}
+
+.modal-wrap {
+    background: rgb(132, 219, 186);
+    padding: 3em 5em;
+    border-radius: 15px;
+    box-shadow: 3px 2px 5px 1px rgb(73, 72, 72);
+}
